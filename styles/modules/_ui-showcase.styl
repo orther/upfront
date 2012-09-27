@@ -9,35 +9,42 @@
 //------
 
 .m-ui-showcase-line
-  $bg = #e3e3e3
-  $bd = #c6c6c6
-
-  background rgba($bg, 0.2)
-  border 1px solid rgba($bd, 0.2)
-  padding 6px 3px
-  margin 20px 0
+  background lighten(#000, 95%)
+  border 1px dashed darken(@background, 50%)
+  margin 2px 0
+  padding 14px 2px 2px
+  overflow hidden
 
   &:hover
-    background $bg
-    border 1px solid $bd
+    border-style solid
 
-    >.m-ui-showcase-line-details
-      background $bd
+    .m-ui-showcase-line-details
+      opacity 1
 
   .m-ui-showcase-line-details
-    background rgba($bd, 0.2)
-    color black
-    padding 2px 4px
-    direction ltr
+    background darken(@background, 50%)
+    color lighten(@background, 90%)
+    position absolute
+    margin -15px 0 0 -3px
     font-size 10px
     font-family Courier
-    height (@font-size + (@padding * 2))
-    margin -(@height + 7px) -4px
-    position absolute
+    padding 1px
+    opacity 0.2
 
-.m-ui-showcase-unit-details
-  font-size 10px
-  font-family Courier
-  background pink
-  color black
-  border 1px solid red
+  .m-ui-showcase-unit
+
+    .m-ui-showcase-unit-details
+      $bd = #00b2ee
+      $bg = lighten($bd, 30%)
+
+      padding 2px
+      background lighten($bg, 50%)
+      border 1px dashed lighten($bd, 50%)
+      color black
+      font-size 12px
+      font-family Courier
+
+      &:hover
+        //background $bg
+        border-color $bd
+        border-style solid
