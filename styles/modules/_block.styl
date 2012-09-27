@@ -1,0 +1,109 @@
+//- upfront --------------------------------------------------------------------
+//------------------------------------------------------------------------------
+// BLOCK MODULES
+//------------------------------------------------------------------------------
+// NOTE: This is currently strongly based on OOCSS but will be changing quite a 
+//       bit.
+
+
+// BASIC BLOCK
+//-------------
+
+div.m-block
+  margin 10px
+
+b.m-block-top, b.m-block-tl, b.m-block-tr,
+b.m-block-bottom, b.m-block-bl, b.m-block-br
+  display block
+  background-repeat no-repeat
+  font-size 1%
+  position relative
+  z-index 10
+
+b.m-block-tl, b.m-block-tr, b.m-block-bl, b.m-block-br
+  height 10px
+  width 10px
+  float left
+
+b.m-block-tl
+  background-position left top
+
+b.m-block-tr
+  background-position right top
+
+b.m-block-bl
+  background-position left bottom
+
+b.m-block-br
+  background-position right bottom
+
+b.m-block-br, b.m-block-tr
+  float right
+
+b.m-block-tr, b.m-block-tl
+  overflow hidden
+  margin-bottom -32000px
+  // margin bottom needs to be < -9px
+
+b.m-block-bl, b.m-block-tr
+  margin-top -10px
+
+b.m-block-top
+  background-position center top
+
+b.m-block-bottom
+  background-position center bottom
+
+
+// COMPLEX BLOCK
+//---------------
+
+div.m-block-complex
+  overflow hidden
+  *position relative
+  *zoom 1
+
+div.m-block-complex > b.m-block-top > b.m-block-tl,
+div.m-block-complex > b.m-block-top > b.m-block-tr
+  height 32000px
+  margin-bottom -32000px
+  width 10px
+
+div.m-block-complex > b.m-block-bottom > b.m-block-bl,
+div.m-block-complex > b.m-block-bottom > b.m-block-br
+  //margin-top 0
+
+div.m-block-complex > b.m-block-top
+  height 5px
+
+div.m-block-complex > b.m-block-bottom
+  height 5px
+  //margin-top -10px
+
+
+// POPUP BLOCK
+//-------------
+
+div.m-block-popup
+  overflow visible
+  margin 10px 20px 20px 10px
+  background-position left top
+
+div.m-block-popup > div.m-block-inner
+  right -10px
+  bottom -10px
+  background-position right bottom
+  padding 0 10px 10px 0
+
+div.m-block-popup > div.m-block-top > div.m-block-tl,
+div.m-block-popup > div.m-block-bottom > div.m-block-br
+  display none
+
+div.m-block-popup > div.m-block-bottom > div.m-block-bl
+  bottom -10px
+
+div.m-block-popup > div.m-block-top > div.m-block-tr
+  float right
+  margin-right -10px
+  // fix double margin bug
+  _display inline
