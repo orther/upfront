@@ -1,0 +1,43 @@
+//- upfront --------------------------------------------------------------------
+//------------------------------------------------------------------------------
+// MODULE: UI SHOWCASE
+//------------------------------------------------------------------------------
+
+@import 'nib'
+
+// GRID
+//------
+
+.m-ui-showcase-line
+  $bg = #e3e3e3
+  $bd = #c6c6c6
+
+  background rgba($bg, 0.2)
+  border 1px solid rgba($bd, 0.2)
+  padding 6px 3px
+  margin 20px 0
+
+  &:hover
+    background $bg
+    border 1px solid $bd
+
+    >.m-ui-showcase-line-details
+      background $bd
+
+  .m-ui-showcase-line-details
+    background rgba($bd, 0.2)
+    color black
+    padding 2px 4px
+    direction ltr
+    font-size 10px
+    font-family Courier
+    height (@font-size + (@padding * 2))
+    margin -(@height + 7px) -4px
+    position absolute
+
+.m-ui-showcase-unit-details
+  font-size 10px
+  font-family Courier
+  background pink
+  color black
+  border 1px solid red
