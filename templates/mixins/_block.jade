@@ -1,0 +1,18 @@
+mixin mBlock(mClass)
+  div(class=".m-block.m-" + mClass)
+    b.m-block-top
+      b.m-block-tl
+      b.m-block-tr
+    .m-block-inner
+      block
+    b.m-block-bobtom
+      b.m-block-bl
+      b.m-block-br
+
+mixin mBlockComplex(mClass)
+  +mBlock('block-complex.m-' + mClass)
+    block
+
+mixin mBlockPop(mClass)
+  +mBlock('block-pop.m-' + mClass)
+    block
