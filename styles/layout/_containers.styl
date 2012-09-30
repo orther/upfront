@@ -4,13 +4,15 @@
 //------------------------------------------------------------------------------
 
 .l-constrained
-  max-width 1200px
+.l-constrained-loose
+.l-constrained-tight
+  max-width $upft-constrainedWidth
   margin auto
-  padding 2.5em 0
+  padding $upft-constrainedBasePadding
   overflow hidden
 
 .l-constrained-tight
-  padding 1em 0
+  padding $upft-constrainedTightPadding
 
-.l-constrained-tightest
-  padding 0
+.l-constrained-loose
+  padding $upft-constrainedLoosePadding
