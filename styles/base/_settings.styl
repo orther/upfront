@@ -5,7 +5,36 @@
 // NOTE: Need to add intelligent way to set custom values for these default
 //       settings. The ternary operator is just too verbose.
 
-// GRID SETTINGS
-//---------------
+// COLOR
+//--------
 
-$upftGridGutterWidth = 30px
+$upft-bgColor       = white
+$upft-txtColor      = black
+$upft-headingsColor = $upft-txtColor
+
+$upft-linkColor      = orange
+$upft-linkHoverColor = darken($upft-linkColor, 20%)
+
+
+// TYPE
+//------
+
+$upft-baseFontSize   = 14px
+$upft-baseLineHeight = 20px
+$upft-baseFontFamily = Monaco, Menlo, Consolas, "Courier New", monospace
+
+$upft-headingsFontFamily = $upft-baseFontFamily
+$upft-headingsFontWeight = bold
+
+
+// LAYOUT
+//--------
+
+// constrained
+$upft-constrainedWidth        = 960px
+$upft-constrainedBasePadding  = 1em 0
+$upft-constrainedLoosePadding = 2.5em 0
+$upft-constrainedTightPadding = 0
+
+// grid (line/unit)
+$upft-gridGutterWidth = 30px

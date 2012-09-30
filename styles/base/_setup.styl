@@ -1,0 +1,51 @@
+//- upfront --------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// BASE SETUP
+// -----------------------------------------------------------------------------
+
+// BODY
+// -----
+
+body
+  margin 0
+  color $upft-txtColor
+  background-color $upft-bgColor
+  font-family $upft-baseFontFamily
+  font-size $upft-baseFontSize
+  line-height $upft-baseLineHeight
+
+
+// LINKS
+// ------
+
+a
+  color $upft-linkColor
+  text-decoration none
+
+  &:hover
+    color $upft-linkHoverColor
+    text-decoration underline
+
+
+// HEADINGS
+//----------
+
+h1, h2, h3, h4, h5, h6
+  margin ($upft-baseLineHeight / 2) 0
+  font-family $upft-headingsFontFamily
+  font-weight $upft-headingsFontWeight
+  line-height 1
+  color $upft-headingsColor
+  text-rendering optimizelegibility
+
+// h1-h3
+for i, c in 1 2 3
+  h{i}
+    font-size 36px - (c * 6px)
+    line-height 40px
+
+// h4-h6
+for i, c in 4 5 6
+  h{i}
+    font-size 20px - (c * 4px)
+    line-height 20px
