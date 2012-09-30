@@ -1,40 +1,38 @@
 //- upfront --------------------------------------------------------------------
 //------------------------------------------------------------------------------
-// SETTINGS
+// DEFAULT SETTINGS
 //------------------------------------------------------------------------------
-// NOTE: Need to add intelligent way to set custom values for these default
-//       settings. The ternary operator is just too verbose.
 
 // COLOR
 //--------
 
-$upft-bgColor       = white
-$upft-txtColor      = black
-$upft-headingsColor = $upft-txtColor
+$upft-bgColor       = white unless $upft-bgColor is defined 
+$upft-txtColor      = black unless $upft-txtColor is defined 
+$upft-headingsColor = $upft-txtColor unless $upft-headingsColor is defined 
 
-$upft-linkColor      = orange
-$upft-linkHoverColor = darken($upft-linkColor, 20%)
+$upft-linkColor      = orange unless $upft-linkColor is defined 
+$upft-linkHoverColor = darken($upft-linkColor, 10%) unless $upft-linkHoverColor is defined 
 
 
 // TYPE
 //------
 
-$upft-baseFontSize   = 14px
-$upft-baseLineHeight = 20px
-$upft-baseFontFamily = Monaco, Menlo, Consolas, "Courier New", monospace
+$upft-baseFontSize   = 14px unless $upft-baseFontSize is defined 
+$upft-baseLineHeight = 20px unless $upft-baseLineHeight is defined 
+$upft-baseFontFamily = Monaco, Menlo, Consolas, "Courier New", monospace unless $upft-baseFontFamily is defined 
 
-$upft-headingsFontFamily = $upft-baseFontFamily
-$upft-headingsFontWeight = bold
+$upft-headingsFontFamily = $upft-baseFontFamily unless $upft-headingsFontFamily is defined 
+$upft-headingsFontWeight = bold unless $upft-headingsFontWeight is defined 
 
 
 // LAYOUT
 //--------
 
 // constrained
-$upft-constrainedWidth        = 960px
-$upft-constrainedBasePadding  = 1em 0
-$upft-constrainedLoosePadding = 2.5em 0
-$upft-constrainedTightPadding = 0
+$upft-constrainedWidth        = 960px unless $upft-constrainedWidth is defined 
+$upft-constrainedBasePadding  = 1em 0 unless $upft-constrainedBasePadding is defined 
+$upft-constrainedLoosePadding = 2.5em 0 unless $upft-constrainedLoosePadding is defined 
+$upft-constrainedTightPadding = 0 unless $upft-constrainedTightPadding is defined 
 
 // grid (line/unit)
-$upft-gridGutterWidth = 30px
+$upft-gridGutterWidth = 30px unless $upft-gridGutterWidth is defined 
