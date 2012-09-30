@@ -1,0 +1,29 @@
+{
+  "name": "upfront-ui",
+  "description": "Scalable and Modular Object Oriented HTML (using Jade templates) and styles (using Stylus CSS language). These styles and templates are designed to be used as a starting point for module/component based web apps.",
+  "version": "0.0.1",
+  "keywords": [
+    "upfront-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AbleCoder/upfront.git"
+  },
+  "dependencies": {
+    "jade": "0.27.5",
+    "stylus": "0.29.0"
+  },
+  "bugs": {
+    "url": "https://github.com/AbleCoder/upfront/issues"
+  },
+  "homepage": "https://github.com/AbleCoder/upfront",
+  "engines": {
+    "node": "*"
+  },
+  "author": "AbleCoder <an.able.coder@gmail.com> (http://AbleCoder.com)",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}
